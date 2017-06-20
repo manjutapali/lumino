@@ -1,0 +1,24 @@
+.nav-header
+{
+	background: #00BCD4;
+	font-size: 18px;
+}
+
+.nav-header a
+{
+
+	color: white;
+	text-decoration: none;
+}
+
+.nav>li>a:focus, .nav>li>a:hover
+{
+	color: #E0F7FA;
+	background: none;
+}
+
+.navbar-brand
+{
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+}
