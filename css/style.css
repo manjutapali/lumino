@@ -22,3 +22,14 @@
 	font-family: 'Lobster', cursive;
 	font-size: 30px;
 }
+
+.section
+{
+	background: #E0F7FA;
+	margin-top: 16px;
+}
+
+.cn-header
+{
+	text-align: center;
+}
