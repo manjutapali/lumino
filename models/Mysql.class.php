@@ -16,7 +16,7 @@
 			$user = isset($config['user']) ? $config['user'] : 'root';
 			$password = isset($config['password']) ? $config['password'] : '';
 			$dbname = isset($config['dbname']) ? $config['dbname'] : '';
-			$port = isset($conf)['port'] ? $config['port'] : '3306';
+			$port = isset($conf['port']) ? $config['port'] : '3306';
 			$charset = isset($config['charset'])? $config['charset'] : '3306';
 
 

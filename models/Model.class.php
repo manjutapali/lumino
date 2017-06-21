@@ -1,5 +1,8 @@
 <?php
 
+    
+    include 'Mysql.class.php';
+
 	class Model
 	{
 		protected $db;
@@ -11,7 +14,7 @@
 			$dbconfig['host'] = "localhost";
 			$dbconfig['user'] = "root";
 			$dbconfig['password'] = "";
-			$dbconfig['dbname'] = "office"
+			$dbconfig['dbname'] = "filestorer";
 			$dbconfig['port'] = "3306";
 			$dbconfig['charset'] = "utf8";
 
@@ -31,17 +34,17 @@
 
 				if($val['Key'] == 'PRI')
 				{
-					$pk = $v['Field'];
+					$pk = $val['Field'];
 				}	
 			}
+
+            if (isset($pk)) 
+            {
+
+                $this->fields['pk'] = $pk;
+
+            }
 		}
-
-		if (isset($pk)) 
-		{
-
-            $this->fields['pk'] = $pk;
-
-        }
 
 
         //Inserting into the table
@@ -144,7 +147,9 @@
         		$sql = "SELECT * FROM {$this->table} WHERE $where LIMIT $offset, $limit";
         	}
 
-        	return $this->db->getAll($sql);
+        	$list =  $this->db->getAll($sql);
+
+            return $list;
         }
 
 	}
