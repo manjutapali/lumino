@@ -9,7 +9,6 @@
 				<th>First name </th>
 				<th>Last name</th>
 				<th>contact</th>
-				<th>email</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -20,9 +19,8 @@
 					echo "<td>" . $user['fname'] . "</td>";
 					echo "<td>" . $user['lname'] . "</td>";
 					echo "<td>" . $user['contact'] . "</td>";
-					echo "<td>" . $user['email'] . "</td>";
-					echo "<td><button class='btn btn-info'> View </button>";
-					echo "<button class='btn btn-danger'> Edit </button></td>";
+					echo "<td><button class='btn btn-info'><a href='http://localhost/lumino/index.php/user/details/". $user['user_id'] ."' class='btn-a'> View </a></button>";
+					echo "<button class='btn btn-danger'><a href='http://localhost/lumino/index.php/user/edit/". $user['user_id'] . "' class='btn-a'> Edit </a></button></td>";
 					echo "</tr>";
 				}
 			?>

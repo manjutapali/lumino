@@ -45,6 +45,15 @@
  			}
 		}
 
+		public function details($uid)
+		{
+			
+			$obj = new Model('user');
+			$user = $obj->selectByPk($uid);
+
+			include('views/details.php');
+		}
+
 
 	}
 ?>
