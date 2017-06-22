@@ -6,10 +6,10 @@
 		<thead>
 			<tr>
 				<th>User ID</th>
-				<th>Name </th>
-				<th>Email </th>
-				<th>Date of birth</th>
-				<th>Gender </th>
+				<th>First name </th>
+				<th>Last name</th>
+				<th>contact</th>
+				<th>email</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -17,10 +17,12 @@
 				foreach ($list as $user) {
 					echo "<tr>";
 					echo "<td>" . $user['user_id'] . "</td>";
-					echo "<td>" . $user['name'] . "</td>";
+					echo "<td>" . $user['fname'] . "</td>";
+					echo "<td>" . $user['lname'] . "</td>";
+					echo "<td>" . $user['contact'] . "</td>";
 					echo "<td>" . $user['email'] . "</td>";
-					echo "<td>" . $user['dob'] . "</td>";
-					echo "<td>" . $user['gender'] . "</td>";
+					echo "<td><button class='btn btn-info'> View </button>";
+					echo "<button class='btn btn-danger'> Edit </button></td>";
 					echo "</tr>";
 				}
 			?>

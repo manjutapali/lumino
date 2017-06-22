@@ -10,8 +10,10 @@
 			//echo "Loading the ". $controller ." controller, calling " .$function. "<br>";
 
 			$obj = new $controller;
-
-			$obj->{$function}();
+			if(!empty($function))
+			{
+				$obj->{$function}();
+			}
 		}
 
 		public static function post($controller, $function, $param)

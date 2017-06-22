@@ -58,7 +58,7 @@
         		if(in_array($key, $this->fields))
         		{
         			$field_list .= '`' . $key . '`' . ',';
-        			$value_list .= '`' . $value . '`' . ',';
+        			$value_list .= '"' . $value . '"' . ',';
         		}
         	}
 
@@ -66,7 +66,7 @@
         	$value_list = rtrim($value_list, ",");
 
         	$sql = "INSERT INTO `{$this->table}` ({$field_list}) VALUES({$value_list})";
-
+            echo "SQL statement = ".$sql;
         	if($this->db->query($sql))
         	{
         		return $this->db->getInsertId();
