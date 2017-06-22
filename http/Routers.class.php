@@ -12,7 +12,8 @@
 			$obj = new $controller;
 			if(!empty($function))
 			{
-				$obj->{$function}();
+
+				empty($param) ? $obj->{$function}() : $obj->{$function}($param);
 			}
 		}
 

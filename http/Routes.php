@@ -9,14 +9,18 @@
 
 	// 3rd index holds the controller name
 
-	if(isset($url_split[3]))
+	if(isset($url_split[4]))
 	{
-		switch ($url_split[3]) 
+		switch ($url_split[4]) 
 		{
-			case 'user':
+			case 'listUsers':
 				isset($url_split[4]) ? Router::get('user', $url_split[4]) : Router::get('user');
 				break;
-			
+			case 'create':
+				isset($url_split[4]) ? Router::get('user', $url_split[4]) : Router::get('user');
+				break;
+			case 'details':
+				isset($url_split[4]) ? Router::get('user', $url_split[4], $url_split[5]) : Router::get('user');
 			default:
 				
 				break;
