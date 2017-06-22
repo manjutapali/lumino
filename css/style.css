@@ -2,6 +2,7 @@
 {
 	background: #00BCD4;
 	font-size: 18px;
+	border-radius: 0px;
 }
 
 .nav-header a
@@ -32,4 +33,45 @@
 .cn-header
 {
 	text-align: center;
+}
+
+.usr-frm
+{
+	margin: 20px;
+}
+
+.form-control
+{
+	width:400px;
+}
+
+.frm-disp
+{
+	display: inline-block;
+}
+
+.ct-text
+{
+	display: inline;
+	vertical-align: middle;
+	resize:none;
+}
+.lb-wid{
+	width: 100px;
+}
+
+.frm-sub
+{
+	display: block;
+}
+
+.input-sub
+{
+	position: relative;
+	left: 45%;
+}
+
+.btn
+{
+	margin-left: 5px;
 }
