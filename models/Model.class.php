@@ -78,24 +78,16 @@
         }
 
         //Updating records
-        public function update($list)
+        public function update($list, $uid)
         {
         	$update_fields = '';
-        	$where = 0;
+        	$where = "`user_id`= $uid";
 
-        	foreach ($list as $key => $value) {
+        	foreach ($list as $key => $value) 
+            {
         		
-        		if(in_array($key, $fields))
-        		{
-        			if($key == $this->fields['pk'])
-        			{
-        				$where = "`$key`=$value";
-        			}
-        			else
-        			{
-        				$update_fields .= "`$key`=`$value`" . ",";
-        			}
-        		}
+        		$update_fields .= "`$key`='$value'" . ",";
+        		
         	}
 
         	$update_fields = rtrim($update_fields,",");
