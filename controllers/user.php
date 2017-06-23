@@ -52,8 +52,45 @@
 			$user = $obj->selectByPk($uid);
 
 			include('views/details.php');
+
+			exit;
 		}
 
+		public function edit($uid="")
+		{
+			if(empty($uid))
+			{
+
+			}
+			else
+			{
+				//echo "User id = " . $uid . "<br>";
+				$obj = new Model('user');
+				$user = $obj->selectByPk($uid);
+
+				include('views/edit.php');
+
+				if(isset($_POST['fname']))
+				{
+					$details = array();
+
+					$details['fname'] = $_POST['fname'];
+					$details['lname'] = $_POST['lname'];
+					$details['email'] = $_POST['email'];
+					$details['dob'] = $_POST['dob'];
+					$details['contact'] = $_POST['contact'];
+					$details['address'] = $_POST['address'];
+
+					unset($_POST);
+
+					$obj = new Model('user');
+					$status = $obj->update($details, $uid);
+
+					Helpers::Redirect("http://localhost/lumino/index.php");
+	 			}
+
+			}
+		}
 
 	}
 ?>
