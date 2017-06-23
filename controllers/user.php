@@ -41,7 +41,7 @@
 				$obj = new Model('user');
 				$status = $obj->insert($details);
 
-				Helpers::Redirect("http://localhost/lumino/index.php");
+				Helpers::Redirect("/");
  			}
 		}
 
@@ -80,13 +80,13 @@
 					$details['dob'] = $_POST['dob'];
 					$details['contact'] = $_POST['contact'];
 					$details['address'] = $_POST['address'];
-
+					//print_r($_POST);
 					unset($_POST);
 
 					$obj = new Model('user');
 					$status = $obj->update($details, $uid);
 
-					Helpers::Redirect("http://localhost/lumino/index.php");
+					Helpers::Redirect("/");
 	 			}
 
 			}

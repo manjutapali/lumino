@@ -87,3 +87,12 @@
 	text-decoration: none;
 	color: white;
 }
+
+.ct-container
+{
+	width:100%;
+	max-width: 1200px;
+	height: 20px;
+	background: yellow;
+	margin: 20px;
+}

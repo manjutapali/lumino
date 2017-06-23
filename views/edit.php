@@ -1,6 +1,6 @@
 <div class = "col-lg-10 col-lg-offset-1 section">
 	<?php  
-		$link = "http://localhost/lumino/index.php/user/edit/" . $user['user_id'];
+		$link = "/user/edit/" . $user['user_id'];
 	?>
 	<form class="usr-frm" method="post" action="<?php echo $link; ?>">
 		<div class="form-group row">
