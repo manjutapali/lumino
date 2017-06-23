@@ -17,9 +17,14 @@
 			}
 		}
 
-		public static function post($controller, $function, $param)
+		public static function post($controller, $function, $param="")
 		{
+			$obj = new $controller;
+			if(!empty($function))
+			{
 
+				empty($param) ? $obj->{$function}() : $obj->{$function}($param);
+			}
 		}
 
 		public static function update($controller, $function, $param)

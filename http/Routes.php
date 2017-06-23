@@ -17,10 +17,13 @@
 				isset($url_split[4]) ? Router::get('user', $url_split[4]) : Router::get('user');
 				break;
 			case 'create':
-				isset($url_split[4]) ? Router::get('user', $url_split[4]) : Router::get('user');
+				isset($url_split[4]) ? Router::post('user', $url_split[4]) : Router::post('user');
 				break;
 			case 'details':
 				isset($url_split[4]) ? Router::get('user', $url_split[4], $url_split[5]) : Router::get('user');
+
+			case 'edit':
+				(isset($url_split[4]) &&isset($url_split[5])) ? Router::post('user', $url_split[4], $url_split[5]) : Router::post('user', $url_split[4]);
 			default:
 				
 				break;
