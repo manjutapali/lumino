@@ -1,0 +1,49 @@
+<div class = "col-lg-10 col-lg-offset-1 section">
+	<form class="usr-frm" method="post" action="/ris/create">
+		<div class="form-group row">
+  			<label for="title" class="col-2 col-form-label lb-wid">Title : </label>
+  			<div class="frm-disp">
+    			<input class="form-control" type="text" id="title" name="title" placeholder="Title" required/>
+  			</div>
+		</div>
+		<div class="form-group row">
+			<label for="duedate" class="lb-wid">Due date :</label>
+			<div class='frm-disp'>
+                <input type='datetime-local' name="duedate" class="form-control" id="duedate" title="Due date"/>
+            </div>
+		</div>
+		<div class="form-group row">
+			<label for="requestor" class="lb-wid"> Requestor :</label>
+			<div class="frm-disp">
+				<input type="text" class="form-control" name="requestor" id="requestor" maxlength="20" placeholder="Requestor"/> 
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="lb-wid" for="task">Task :</label>
+			<div class="frm-disp">
+				<input type="text" class="form-control" name="task" id="task" placeholder="Task"/>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="instructions" class="lb-wid">Instructions :</label>
+			<div class="frm-disp">
+				<textarea class="form-control ct-text" id="instructions" name="instructions" cols="10" rows="5" placeholder="Instructions"></textarea>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="priority" class="lb-wid">Priority :</label>
+			<div class="frm-disp">
+				<select class="form-control" name="priority" id="priority">
+	    			<option>Low</option>
+	    			<option>Medium</option>
+	    			<option>High</option>
+	    		</select>
+    		</div>
+		</div>
+		<div class="form-group row">
+			<div class="frm-sub">
+				<input type="submit" class="input-sub"/>
+			</div>
+		</div>
+	</form>
+</div>

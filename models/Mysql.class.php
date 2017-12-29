@@ -12,7 +12,7 @@
 
 		public function __construct($config = array())
 		{
-			$host = isset($config['host']) ? $config['host'] : 'localhost';
+			$host = isset($config['host']) ? $config['host'] : '127.0.0.1';
 			$user = isset($config['user']) ? $config['user'] : 'root';
 			$password = isset($config['password']) ? $config['password'] : '';
 			$dbname = isset($config['dbname']) ? $config['dbname'] : '';

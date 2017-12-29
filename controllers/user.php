@@ -1,6 +1,6 @@
 <?php
 	
-	include 'models/Model.class.php';
+	include_once 'models/Model.class.php';
 	include 'helpers/Helpers.class.php';
 	class user
 	{
@@ -8,9 +8,6 @@
 
 		public function listUsers()
 		{
-			//echo "Its from the user controller". "<br>";
-
-			//echo "Listing all the users"."<br>";
 
 			$obj = new Model('user');
 			$list = $obj->pageRows(0,8);
@@ -21,8 +18,6 @@
 
 		public function create()
 		{
-			//echo "Creating user" . "</br>";
-
 			include("views/Usercreate.html");
 
 			if(isset($_POST['fname']))
@@ -37,7 +32,6 @@
 				$details['address'] = $_POST['address'];
 
 				unset($_POST);
-
 				$obj = new Model('user');
 				$status = $obj->insert($details);
 

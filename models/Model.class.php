@@ -132,11 +132,11 @@
         {
         	if(empty($where))
         	{
-        		$sql = "SELECT * FROM {$this->table} LIMIT $offset, $limit";
+        		$sql = "SELECT * FROM {$this->table} ORDER BY created_time DESC LIMIT $offset, $limit";
         	}
         	else
         	{
-        		$sql = "SELECT * FROM {$this->table} WHERE $where LIMIT $offset, $limit";
+        		$sql = "SELECT * FROM {$this->table} WHERE $where ORDER BY created_time DESC LIMIT $offset, $limit";
         	}
 
         	$list =  $this->db->getAll($sql);

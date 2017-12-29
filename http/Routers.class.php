@@ -1,6 +1,7 @@
 <?php
 
 	include 'controllers/user.php';
+	include 'controllers/ris.php';
 	
 	class Router
 	{
